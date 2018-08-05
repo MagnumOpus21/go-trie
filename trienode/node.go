@@ -1,4 +1,4 @@
-package trie
+package trienode
 
 import (
 	"sync"
@@ -10,6 +10,6 @@ type Node struct {
 	level    int
 	metadata interface{}
 	leaf     bool
-	children []*Node
+	children map[rune]*Node
 	locks    sync.RWMutex
 }
